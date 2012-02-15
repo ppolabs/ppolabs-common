@@ -1,4 +1,5 @@
-This is subset of ppolabs-common code-sink for mainly java files.
+This is a public subset of ppolabs-common code-sink for mainly java
+files.
 
 In this repository the MINDBEND (Matrix Interface aNd Data Back-END)
 package is extracted.
