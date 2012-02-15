@@ -14,19 +14,20 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
 
-    <!--<repositories>-->
-    <!--<repository>-->
-    <!--<id>ppolabs-mvn-repo</id>-->
-    <!--<name>Public Maven Repository of PPO.labs</name>-->
-    <!--<url>http://espresso01.ppolabs.me/mvn</url>-->
-    <!--<releases>-->
-    <!--<enabled>true</enabled>-->
-    <!--</releases>-->
-    <!--<snapshots>-->
-    <!--<enabled>true</enabled>-->
-    <!--</snapshots>-->
-    <!--</repository>-->
-    <!--</repositories>-->
+    <repositories>
+        <repository>
+            <id>ppolabs-mvn-repo</id>
+            <name>Public Maven Repository of PPO.labs</name>
+            <url>http://94.209.52.167/mvn</url>
+            <releases>
+                <enabled>true</enabled>
+            </releases>
+            <snapshots>
+                <enabled>true</enabled>
+            </snapshots>
+        </repository>
+    </repositories>
+
     <dependencies>
         <dependency>
             <groupId>junit</groupId>
