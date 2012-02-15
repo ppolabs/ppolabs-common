@@ -1,0 +1,39 @@
+This is subset of ppolabs-common code-sink for mainly java files.
+
+In this repository the MINDBEND (Matrix Interface aNd Data Back-END)
+package is extracted.
+
+So, have fun browsing through mindbend package and micro-benchmarks
+developed to test and evaluate the performance of different java
+linear algebra libraries, and implementations for the matrix
+manipulations and other numerical operations needed in jDoris and
+NEST-DORIS projects. There is a special emphasis on benchmark-ing and
+handling of complex numbers and data in Java.
+
+You can run the package with the jar that available to download on
+GitHub like:
+
+       $ java -server -jar mindbend-0.3.jar --help
+
+This command should list help that gives a very brief description of
+flags for benchmarks and testing.
+
+Note that you'll also need Java7, because among other things the
+clases extensively use only Java7 stuff, like "Switch stetement on
+Strings", and also use fork/join framework for "experimental" classes.
+
+There is also a dependency on internal build of ojAlgo
+(3.7.1-SNAPSHOT), the jar is on a public maven repository of PPO.labs
+(mvn.ppolabs.net) (refer to the central pom for details). Anyhow
+"maven compile" should work out of box.
+
+About experimental classes, expect that they might crash or fail to
+perform as expected on your system. For example Strassen
+multiplication is optimized for 8 threads processing, and only very
+large matrices (eg. lot's of CPU cycles are bieng wasted if 32x32
+matrix is partitioned and forked on different threads).
+
+Known issues: ojAlgo library, that has a threading model based on
+Java's ExecutorService does not scale as expected on 32+ cores systems
+(eg. AMD Opteron 6128, with 32 cores and 128Gb RAM). On 8 cores Intel
+i7 CPU
