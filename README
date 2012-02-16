@@ -37,4 +37,5 @@ matrix is partitioned and forked on different threads).
 Known issues: ojAlgo library, that has a threading model based on
 Java's ExecutorService does not scale as expected on 32+ cores systems
 (eg. AMD Opteron 6128, with 32 cores and 128Gb RAM). On 8 cores Intel
-i7 CPU
+i7 CPU 860 @ 2.80Ghz with 16Gb of RAM, ojAlgo routines scale almost
+linearly with the number of cores.
